@@ -7,6 +7,9 @@
     "start": "node server/index.js",
     "build": "npm install; npm run build"
   },
+  "engines": {
+    "node": ">=16.9"
+  },
   "keywords": [],
   "author": "lulumutuli",
   "license": "ISC",
