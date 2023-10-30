@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './App.css';
 
 function App() {
 
-  const [data, setData] = React.useState(null);
+  const [data, setData] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch("/api")
     .then((res) => res.json())
-    .then(() => setData(data.message))
+    .then((data) => setData(data.message))
   }, []);
+
 
   return (
     <div className="App">
